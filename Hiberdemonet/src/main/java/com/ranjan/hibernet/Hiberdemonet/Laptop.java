@@ -1,0 +1,39 @@
+package com.ranjan.hibernet.Hiberdemonet;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Laptop {
+	@Id
+private int lid;
+private String lname;
+//@ManyToOne
+	/*
+	 * private Laptop laptop; public Laptop getLaptop() { return laptop; } public
+	 * void setLaptop(Laptop laptop) { this.laptop = laptop; }
+
+	 */
+@ManyToOne
+private Student student;
+public Student getStudent() {
+	return student;
+}
+public void setStudent(Student student) {
+	this.student = student;
+}
+public int getLid() {
+	return lid;
+}
+public void setLid(int lid) {
+	this.lid = lid;
+}
+public String getLname() {
+	return lname;
+}
+public void setLname(String lname) {
+	this.lname = lname;
+}
+
+}
